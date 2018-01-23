@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <title>Van Tomanek</title>
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=UnifrakturCook:700" rel="stylesheet">
@@ -11,25 +12,49 @@
 <body>
     <nav class="menu">
         <div class="bg"></div>
-        <ul class="menu__list"> 
-            <li class="menu__item"><a class="menu__link" href="#">Strona główna</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Świat test</a></li>
-            <li class="menu__item menu__item--right"><a class="menu__link menu__link--right" href="#">Mechanika</a></li>
-            <li class="menu__item menu__item--right"><a class="menu__link menu__link--right" href="#">Kontakt</a></li>
+        <ul class="menu__list">
+            <li class="menu__item">
+                <a class="menu__link" href="#intro">Strona główna</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#info">Świat test</a>
+            </li>
+            <li class="menu__item menu__item--right">
+                <a class="menu__link menu__link--right" href="#">Mechanika</a>
+            </li>
+            <li class="menu__item menu__item--right">
+                <a class="menu__link menu__link--right" href="#">Kontakt</a>
+            </li>
         </ul>
     </nav>
     <div class="panel intro" data-section-name="intro">
-        <h1 class="intro__header"><p class="intro__subheader">Monster</p><p class="intro__subheader">Hunters</p></h1>
+        <h1 class="intro__header">
+            <p class="intro__subheader">Monster</p>
+            <p class="intro__subheader">Hunters</p>
+        </h1>
         <div class="intro__content__container">
-            <p class="intro__content">Orem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus pellentesque odio sed mattis. Nulla in vehicula odio, a consectetur lacus. Mauris nec orci porta, facilisis dolor quis, cursus sem. Nam et sollicitudin mi, in facilisis arcu. Ut ut tortor neque. Morbi sagittis felis elementum, aliquet dui nec, lacinia mi. Nam dignissim leo velit, non blandit risus rhoncus sed. Donec convallis est id dui iaculis aliquet. </p>
+            <p class="intro__content">Orem ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus pellentesque odio sed mattis. Nulla in
+                vehicula odio, a consectetur lacus. Mauris nec orci porta, facilisis dolor quis, cursus sem. Nam et sollicitudin
+                mi, in facilisis arcu. Ut ut tortor neque. Morbi sagittis felis elementum, aliquet dui nec, lacinia mi. Nam
+                dignissim leo velit, non blandit risus rhoncus sed. Donec convallis est id dui iaculis aliquet. </p>
         </div>
     </div>
     <div class="panel info" data-section-name="info">
         <h1 class="info__header">Informacje</h1>
         <div class="info__content">
-            <p class="info__content--paragraph">Ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus pellentesque odio sed mattis. Ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus pellentesque odio sed mattis. Ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus pellentesque odio sed mattis. Ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus pellentesque odio sed mattis. </p>
-            <p class="info__content--paragraph">Fosum dolor sit amet, consectetur adipiscing elit. Integer luctus pellentesque odio sed mattis. Ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus pellentesque odio sed mattis. Ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus pellentesque odio sed mattis.</p>
-            <p class="info__content--paragraph">Integer luctus pellentesque odio sed mattis. Ipsum dolor sit amet, consectetur adipiscing elit.  Aliqua ea eiusmod minim occaecat qui amet cupidatat.Ad Lorem ex consectetur nulla incididunt esse esse adipisicing commodo eu.Do exercitation cupidatat fugiat id veniam exercitation incididunt irure ad dolor.Tempor dolor sunt laborum dolor magna ut consectetur eiusmod aliqua exercitation excepteur minim enim.Fugiat aliquip ad esse sint do cillum ex magna tempor aute elit esse commodo.Veniam est quis aute eu commodo elit nisi dolor occaecat occaecat eiusmod.</p>
+            <p class="info__content--paragraph">Ipsum dolor sit amet, consectetur adipiscing elit. Integer luctus pellentesque odio sed mattis. Ipsum dolor sit
+                amet, consectetur adipiscing elit. Integer luctus pellentesque odio sed mattis. Ipsum dolor sit amet, consectetur
+                adipiscing elit. Integer luctus pellentesque odio sed mattis. Ipsum dolor sit amet, consectetur adipiscing
+                elit. Integer luctus pellentesque odio sed mattis. </p>
+            <p class="info__content--paragraph">Fosum dolor sit amet, consectetur adipiscing elit. Integer luctus pellentesque odio sed mattis. Ipsum dolor sit
+                amet, consectetur adipiscing elit. Integer luctus pellentesque odio sed mattis. Ipsum dolor sit amet, consectetur
+                adipiscing elit. Integer luctus pellentesque odio sed mattis.</p>
+            <p class="info__content--paragraph">Integer luctus pellentesque odio sed mattis. Ipsum dolor sit amet, consectetur adipiscing elit. Aliqua ea eiusmod
+                minim occaecat qui amet cupidatat.Ad Lorem ex consectetur nulla incididunt esse esse adipisicing commodo
+                eu.Do exercitation cupidatat fugiat id veniam exercitation incididunt irure ad dolor.Tempor dolor sunt laborum
+                dolor magna ut consectetur eiusmod aliqua exercitation excepteur minim enim.Fugiat aliquip ad esse sint do
+                cillum ex magna tempor aute elit esse commodo.Veniam est quis aute eu commodo elit nisi dolor occaecat occaecat
+                eiusmod.</p>
         </div>
     </div>
 
@@ -42,20 +67,61 @@
 </html>
 
 <script>
- $(function() {
-    $.scrollify({
-		section:".panel",
-    });
+    $(function () {
+        $.scrollify({
+            section: ".panel",
+            interstitialSection: "",
+            easing: "easeOutExpo",
+            scrollSpeed: 1100,
+            offset: 0,
+            scrollbars: true,
+            standardScrollElements: "",
+            setHeights: true,
+            overflowScroll: true,
+            updateHash: true,
+            touchScroll: true,
+            before: function () { },
+            after: function () { },
+            afterResize: function () { },
+            afterRender: function () { }
+        });
 
-    var lastScrollTop = 0;
-    $(window).scroll(function(event){
-       var st = $(this).scrollTop();
-       if (st > lastScrollTop){
-        $.scrollify.next();
-       } else {
-        $.scrollify.previous();
-       }
-       lastScrollTop = st;
+        $.scrollify.disable();
+
+        $(document).keydown(function (e) {
+            $.scrollify.enable();
+            switch (e.which) {
+                case 37: // left
+                    break;
+
+                case 38: // up
+                    $.scrollify.previous();
+                    break;
+
+                case 39: // right
+                    break;
+
+                case 40: // down
+                    $.scrollify.next();
+                    break;
+
+                default: return; // exit this handler for other keys
+            }
+            e.preventDefault(); // prevent the default action (scroll / move caret)
+            $.scrollify.disable();
+        });
+        $('a[href="#intro"]').click(function () {
+            $.scrollify.enable();
+            $.scrollify.move("#intro");
+            $.scrollify.disable();
+
+        });
+        $('a[href="#info"]').click(function () {
+            $.scrollify.enable();
+
+            $.scrollify.move("#info");
+            $.scrollify.disable();
+        });
+
     });
-  });
 </script>
