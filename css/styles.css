@@ -1,0 +1,212 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #08001d;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    box-shadow: #000000 0px 10px 60px 0px;
+    z-index: 1;
+}
+
+.menu .bg{
+    background: url('http://www.textures4photoshop.com/tex/thumbs/grunge-black-and-white-texture-for-photoshop-thumb44.jpg');
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.1;
+    width: 100%;
+    height: 100%;
+}
+/*
+.menu::after {
+    width: 0;
+    height: 0;
+    position: absolute;
+    margin: 0 auto;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0%;
+    border:100px solid transparent;
+    border-bottom: 100px solid #271752;
+    border-right: 100px solid #271752;
+    border-image: url('http://api.thumbr.it/whitenoise-1920x50.png?background=141414FF&noise=626262&density=78&opacity=95');
+    transform: rotate(45deg);
+    transform-origin: 110% 25%;
+    box-shadow: #000000 0px 0px 40px;
+    z-index: 0;
+}
+*/
+.menu::before {
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    margin: 0 auto;
+    content: '';
+    left: 0;
+    right: 0;
+    background-image: url('../img/logo.png');
+    z-index: 5;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menu__list {
+    list-style: none;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    overflow: hidden;
+}
+
+.menu__item {
+    display: table-cell;
+    text-align: center;
+    transform: skew(40deg);
+    border-right: 2px black solid;
+    border-left: 2px black solid;
+}
+.menu__item:hover {
+    background:#463030AA;
+    transition: all 0.75s cubic-bezier(0.645, 0.045, 0.355, 1);  
+    
+}
+
+.menu__item--right{
+    transform: skew(-40deg);
+}
+.menu__link {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    color: #fff; 
+    text-transform: uppercase;
+    transform: skew(-40deg);
+}
+.menu__link--right{
+    transform: skew(40deg);
+}
+
+.intro {
+    background-image: url('../img/intro.jpg');
+    height: 100vh;
+}
+
+.intro__content {
+    padding: 20px;
+    font-size: 18pt;
+    color: #fff;
+    line-height: 1.5;
+
+}
+.intro__content__container{
+    box-shadow: #000000 0px 0px 60px 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    margin-left: 10%;
+    margin-bottom: 150px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+
+.intro__content::first-letter, .intro__subheader::first-letter{
+    font-family: 'UnifrakturCook';
+    font-size: 40pt;
+    text-transform: uppercase;
+    padding: 0px 7px;
+    margin: 2px;
+    border: 1px solid white;
+}
+.intro__subheader::first-letter{
+    font-size: inherit;
+}
+
+.info__header::first-letter{
+    font-size: 64pt;
+}
+
+.intro__subheader:nth-child(2){
+    margin-left: 75%;
+}
+.intro__header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 25%;
+    margin-top: 175px;
+    font-size: 80pt;
+    font-family: 'UnifrakturCook';
+    color: #fff;
+    line-height: 1.75;
+}
+
+.info {
+    background: url('https://images5.alphacoders.com/548/thumb-1920-548706.jpg');
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.info__header{
+    position: relative;
+    top:100px;
+    margin-left: 8%;
+
+    padding: 0 50px 0px 50px;
+    font-size: 48pt;
+    color: #fff;
+    line-height: 1.5;
+    border-bottom: 3px solid rgb(182, 88, 71);
+    display: inline;
+}
+
+.info__content {
+    position: relative;
+    max-width: 425px;
+    max-height: 80vh;
+    margin-left: 9%;
+
+    color: white;
+    font-size: 16pt;
+    line-height: 1.5;
+    text-align: justify;
+    text-justify: inter-word;
+
+    columns: 3 auto;
+    column-width: 350px;
+    column-gap: 150px;
+}
+
+.info__content p:first-of-type{
+    margin-top: 150px;
+}
+
+.info__content--paragraph::first-letter{
+    font-family: 'UnifrakturCook';
+    font-size: 32pt;
+    text-transform: uppercase;
+    padding: 0px 7px;
+    margin: 2px;
+    border: 1px solid white;
+    margin-left: 30px;
+}
